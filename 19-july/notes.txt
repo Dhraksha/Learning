@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Ecommerce Web-page</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta http-equiv="refresh" content="5">
+    <style>
+        h1 {
+            text-align: center;
+            font-family: cursive;
+            color: red
+        }
+    </style> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h1>VISAKHAPATNAM</h1>
+
+    <button>like</button> <i class="fa fa-thumbs-up" style="font-size:25px; color:grey"></i>
+    <button>dislike</button><i class="fa fa-thumbs-down" style="font-size:25px; color:grey"></i>
+    <script>
+        alert ("gimme sometime")
+        console.log("Welcome");
+    </script>
+</body>
+
+</html>
