@@ -1,0 +1,15 @@
+<html>
+    <head>
+            <title>LAKSHMI</title>
+            <link rel="icon" type="image/png" href="download.jpg"git>
+        <body>
+            <input type="text" style="color: brown; background-color:black;" placeholder="username">
+            <input type="text" style="color: brown; background-color: black;" placeholder="password">
+            <button>Forward</button>
+            <h1>Hey everyone </h1>
+            <img src=https://img2.exportersindia.com/product_images/bc-full/dir_5/140365/mobile-phones-1524922967-3813018.jpeg>
+            <a style="color:purple;">Want it buy it</a>
+            <a href="facebook">Facebook</a>
+        </body>
+    </head>
+</html>
