@@ -1,0 +1,127 @@
+HTML LISTS
+There are two types of lists 
+1-unordered List (tag-<ul>)
+<html>
+    <head>
+        <body>
+            <ul style="list-style-type:circle">
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+                <li>item 6</li>
+            </ul>
+        </body>
+    </head>
+</html>
+
+
+2-ordered list (tag-<ol>)
+<html>
+    <head>
+        <body>
+        <!--by default it gives numbers , if you add "type" attribute then it shows optons--!>
+            <ol type="A">                                               
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li>item 5</li>
+                <li>item 6</li>
+            </ol>
+        </body>
+    </head>
+</html>
+
+
+CREATE A QUIZ PAGE USING LISTS
+<html>
+    <head>
+        <body>
+            <h1 style="text-align: center; color: black;">CAMPUS RECRUITMENT TEST</h1>
+            <hr>
+            <h2>Instructions</h2>
+            <ol>
+                <li>Duration is 1 hour</li>
+                <li>Negative marking -1</li>
+                <li>Each question contains 5 marks</li>
+                <li>Only 1 section</li>
+                <li>contact us:90909909099</li>
+            </ol>
+            <hr>
+            <h3>Questions</h3>
+            <ol>
+                <li>What is HTML stands for?</li>
+                <input name="q1" type="radio">Hyper text markup language<br>
+                <input name="q1" type="radio">Hyper text medium language<br>
+                <input name="q1" type="radio">Hyper text max language<br>
+                <input name="q1" type="radio">Hyper text min language<br>
+
+                <li>Is css requires for frontend?</li>
+                <input name="q1" type="radio">yes<br>
+                <input name="q1" type="radio">no<br>
+                <input name="q1" type="radio">both<br>
+                <input name="q1" type="radio">none<br>
+
+                <li>what UI stands for?</li>
+                <input name="q1" type="radio">upper iterate<br>
+                <input name="q1" type="radio">user interface<br>
+                <input name="q1"type="radio">user itearte<br>
+                <input name="q1" type="radio">user interaction<br>
+
+                <li>anchor tag is used for?</li>
+                <input name="q1" type="radio">text<br>
+                <input name="q1" type="radio">src<br>
+                <input name="q1" type="radio">images<br>
+                <input name="q1" type="radio">for links<br>
+
+                <li>How many lists are present?</li>
+                <input name="q1" type="radio">1<br>
+                <input name="q1" type="radio">2<br>
+                <input name="q1" type="radio">3<br>
+                <input name="q1" type="radio">5<br>
+
+                <li>style represents as?</li>
+                <input name="q1" type="radio">tag<br>
+                <input name="q1" type="radio">attribute<br>
+                <input name="q1" type="radio">both<br>
+                <input name="q1" type="radio">none<br>
+                
+            </ol>
+            <button>submit</button>
+        </body>
+    </head>
+</html>
+
+
+HTML FORMS:
+<html>
+    <head>
+        <body>
+            <center>
+                <h1>Credentials</h1>
+                <form>
+                    <label>USERNAME:</label> <input type="text" size="30" ><br><br>
+                    <label>PASSWORD:</label> <input type="password" size="30" ><br><br>
+                    <label>EMAIL:</label> <input type="email" size="30"><br><br>
+                    <label>CITY:</label>
+                    <select>
+                        <option>select your option</option>
+                        <option>hyderabad</option>
+                        <option>bangalore</option>
+                        <option>mumbai</option>
+                        <option>delhi</option>
+                    </select><br><br>
+                    <label>DOB:</label> <input type="date" max="2023-12-01"><br><br>
+                    <label>GENDER:</label> <input name=gender type="radio"> Male
+                                           <input name=gender type="radio"> female
+                                           <input name=gender type="radio"> transgender<br><br>
+                    <label>RESUME:</label> <input type="file"><br><br>
+                    <input type="checkbox">I agree to above info <br><br>
+                    <button>SUBMIT</button>                   
+                </form>
+           </center>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <!--Internal style sheet-->
+        <style>
+            h1,h2,h3,h4,p{
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: black;
+                background-color: beige;
+            }
+
+</style>
+        <body>
+            <h1>Heading-1</h1>
+            <h2>Heading-2</h2>
+            <h3>Heading-3</h3>
+            <h4>Heading-4</h4>
+            <p>Paragraph</p>
+            
+            <!--Inline style sheet-->
+            <h3 style="text-align:center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">New Header</h3>
+
+        </body>
+    </head>
+</html>
+
+
+
+
+HTML Blocks:
+These are categorized into 2 types
+1. inline elements : An element that takes content level width and starts in the same line.
+<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>
+<html>
+<head>
+</head>
+<body>
+    <input type="text" placeholder="username"> <a href="abc">Hello</a> <span style="background-color: yellow">This is
+        span</span>
+</body>
+</html>
+
+
+2. block level elements:An element that takes max width and always starts in a new line. 
+<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>
+<html>
+<head>
+</head>
+<body>
+    <h1 style="background-color: red">Header</h1>
+    <h2>Header 2</h2>
+    <p>This is a paragraph!</p>
+</body>
+</html>
+        
+ 
+
+
+
+ <html>
+    <head>
+        <style>
+            .theme1
+            {
+              font-family: 'Times New Roman', Times, serif;
+              text-align: center;
+              background-color: blue;
+              color:black
+            }
+
+            .theme2
+            {
+              font-family: 'Times New Roman', Times, serif;
+              text-align: center;
+              background-color:yellowgreen; 
+              color:black
+            }
+
+            
+            .theme3
+            {
+              font-family: 'Times New Roman', Times, serif;
+              text-align: center;
+              background-color: gray; 
+              color:black
+            }
+        </style>
+        <body class="theme3">
+          <h1>This is heading1</h1>
+          <p>A paragraph </p>
+          <input type="text" placeholder="email" >
+
+        </body>
+    </head>
+</html>
+
+
+
+
+id:  using id we can provide a unique identification to a html element. 
+
+<html>
+<head>
+</head>
+<body>
+    <input type="text" id="username">
+    <button onclick="capture()">Submit</button>
+
+    <script>
+        function capture() {
+            document.getElementById("username").value = "Digital lync"
+            document.getElementById("username").style.color = "green"
+            document.getElementById("username").style.backgroundColor = "red"
+        }
+    </script>
+</body>
+</html>
+
+
+<html>
+    <head>
+        <body>
+            <img id="profile">
+            <script>
+                var imageURL1 ="https://m.media-amazon.com/images/I/31UISB90sYL._AC_UL480_FMwebp_QL65_.jpg";
+                var imageURL2 ="https://m.media-amazon.com/images/I/612bZ+umdzL._AC_UL480_FMwebp_QL65_.jpg";
+                var imageURL3 ="https://m.media-amazon.com/images/I/61bAqnFCY8L._AC_UL480_FMwebp_QL65_.jpg";
+                document.getElementById("profile").src=imageURL1;
+            </script>
+        </body>
+    </head>
+</html>
+
+
+
+
+
+HTML TABLES:
+<html>
+    <head>
+
+        <style>
+            tr:hover{
+                background-color: blue;
+            }
+        </style>
+        <body>
+            <table border="1" width="100%" >
+                <thead style="background-color: black; color: aliceblue;">
+                    <th>Sno</th>
+                    <th>Name</th>
+                    <th>RollNo</th>
+                    <th>Branch</th>    
+                    <th colspan="2">payment</th>           
+                </thead>
+                <tbody style="text-align: center" >
+                    <tr>
+                        <td>1</td>
+                        <td>amul</td>
+                        <td>3A1</td>
+                        <td>cse</td>
+                        <td>cash</td>
+                        <td>upi</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>bhagya</td>
+                        <td>3A2</td>
+                        <td>ece</td>
+                        <td>cash</td>
+                        <td>upi</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>chaitu</td>
+                        <td>3A4</td>
+                        <td>civil</td>
+                        <td>cash</td>
+                        <td>upi</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>durga</td>
+                        <td>3A6</td>
+                        <td>mech</td>
+                        <td>cash</td>
+                        <td>upi</td>
+                    </tr>
+                </tbody>
+            </table>
+        </body>
+    </head>
+</html>
+
+
+
+
+
+
+<html>
+    <head>
+
+        <style>
+            tr:hover{
+                background-color: blue;
+            }
+        </style>
+        <body>
+            <table border="1" width="100%">
+                <tr style="text-align: center;">
+                    <th>Course name</th>
+                    <td>fullstack</td>
+                </tr>
+
+                <tr style="text-align: center">
+                    <th>duartion</th>
+                    <td>1 hour  </td>
+                </tr>
+
+                <tr style="text-align: center">
+                    <th>mode</th>
+                    <td>online&offline</td>
+                </tr>
+
+                <tr style="text-align: center">
+                    <th>mentor</th>
+                    <td>sai kumar</td>
+                </tr>
+
+                <tr style="text-align: center">
+                    <th>present course</th>
+                    <td>frontend</td>
+                </tr>
+
+                
+            </table>
+        </body>
+    </head>
+</html>
+
