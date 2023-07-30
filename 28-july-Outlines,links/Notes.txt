@@ -1,0 +1,46 @@
+Outline:
+
+Outline is helpful to highlight above the border. 
+
+<html>
+    <head>
+        <style>
+            h1{
+                border-style: solid;
+                border-color: aqua;
+                margin: 300px;
+                /*outline-style: dashed;
+                outline-color: blueviolet;*/
+                outline-offset: 20px;
+                /*outline-width:5px;*/
+
+                outline: dashed 10px violet;
+            }
+        </style>
+        <body>
+            <h1>Full stack Developer</h1>
+        </body>
+    </head>
+</html>
+
+
+Links:
+
+
+<html>
+    <head>
+        <style>
+            a:hover{
+                text-decoration: none;
+                color:pink;
+                background-color:rgb(12, 5, 5);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        </style>
+        
+        <body>
+            <a href="page1.html" target="_blank">Link</a>
+            <a href="page2.html" target="_blank">another page</a>
+        </body>
+    </head>
+</html>
