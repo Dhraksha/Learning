@@ -1,0 +1,116 @@
+Pseudo class:
+A pseudo-class is used to define a special state of an element.
+Specified by ":"
+<html>
+    <head>
+        <style>
+            /*p{
+                display: none;
+                color: white;
+                background-color: brown;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            div:hover p{
+                display: block;
+            }
+            img:hover{
+                width: 353px;
+                height: 237px ;
+            }
+            p:first-child{
+                color: aqua;
+            }
+            p i:last-child{
+                color: blue;
+            }
+            a:active{
+                color: aquamarine;
+                background-color: brown;
+            }*/
+            input:in-range {
+                border: 10px solid green;
+         
+            }
+
+            
+           
+
+        </style>
+        <body>
+           <img src="data:image/jpeg;base64,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">
+           <br><br>
+           <div>
+            Hovering upon something then gives you a block 
+            <p>Hovered on me</p>
+           </div>
+           <br><br>
+           <input type="file" multiple>
+           <br><br>
+           <div>
+            <p>this is paragraph1</p>
+            <p>this is paragraph2</p>
+            <p>this is paragraph3</p>
+           </div>
+           <br><br>
+           <p>This is <b>first</b> paragraph in the article. The next <i>sentence1</i> in this article is wow</p>
+           <p>This is <b>second</b> paragraph in the article. The next <i>sentence2</i> in this article is wow</p>
+           <br><br>
+           <h1>Something new concept</h1>
+           <a href="abc.html">page1</a>
+           <a href="abc.html">page2</a>
+           <a href="abc.html">page3</a>
+           <br><br>
+           <h1>This is :in range pseudo class</h1>
+           <input type="number" min="1" max="10" value="5">
+           <br><br>
+
+        </body>
+    </head>
+</html>
+
+
+Pseudo elements:
+A CSS pseudo-element is used to style specified parts of an element.
+
+For example, it can be used to:
+
+Style the first letter, or line, of an element
+Insert content before, or after, the content of an element
+<html>
+    <head>
+        <style>
+            h1::first-letter{
+                     color: red;
+                     font-family: cursive;
+            }
+            .new::first-line{
+                color: red;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            #NEW2::before{
+                content: url(download.jpg);
+            }
+            #NEW2::after{
+                content: url(download.jpg);
+            }
+            #NEW2::before{
+                content:"Buy now";
+            }
+            .new3::selection{
+                color: white;
+                background-color: black;
+            }
+
+        </style>
+        <body>
+            <h1>Something new and crazy</h1>
+            <p>One of the paragraph with new information</p>
+            <div>
+                <p class="new">Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.</p>
+            </div><br>
+            <p id="NEW2"><b>HEY EVERYONE OFFERS ARE OUT NOW!</b></p>
+            <p class="new3">hdchcsosidhsdnvns hfsvsdv pajefpnetoief qelqnepiaef ehqe,m sdvndsfef efhefkdshvs</p>
+            </body>
+
+    </head>
+</html>

@@ -1,0 +1,317 @@
+Lists:
+<html>
+    <head>
+        <body>
+            <ul style="list-style-image: url(img1.png);">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+
+            </ul>
+        </body>
+    </head>
+</html>
+
+
+
+Tables:
+<html>
+    <head>
+        <style>
+            tr:nth-child(even){
+                background-color: bisque;
+                color: black;
+
+            }
+            th{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: medium;
+            }
+            tr:hover{
+                background-color: coral;
+            }
+        </style>
+        <body>
+            <table border="1" style="width: 100%; text-align: center; border-collapse: collapse;">
+                <thead>
+                    <th>coloumn1</th>
+                    <th>coloumn2</th>
+                    <th>coloumn3</th>
+                    <th>coloumn4</th>
+                    <th>coloumn5</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>table data1</td>
+                        <td>table data2</td>
+                        <td>table data3</td>
+                        <td>table data4</td>
+                        <td>table data5</td>
+                    </tr>
+                    <tr>
+                        <td>table data1</td>
+                        <td>table data2</td>
+                        <td>table data3</td>
+                        <td>table data4</td>
+                        <td>table data5</td>
+                    </tr>
+                    <tr>
+                        <td>table data1</td>
+                        <td>table data2</td>
+                        <td>table data3</td>
+                        <td>table data4</td>
+                        <td>table data5</td>
+                    </tr>
+                    <var> <tr>
+                        <td>table data1</td>
+                        <td>table data2</td>
+                        <td>table data3</td>
+                        <td>table data4</td>
+                        <td>table data5</td>
+                    </tr>
+                    <tr>
+                        <td>table data1</td>
+                        <td>table data2</td>
+                        <td>table data3</td>
+                        <td>table data4</td>
+                        <td>table data5</td>
+                    </tr>
+                    <tr>
+                        <td>table data1</td>
+                        <td>table data2</td>
+                        <td>table data3</td>
+                        <td>table data4</td>
+                        <td>table data5</td>
+                    </tr>
+                    <tr>
+                        <td>table data1</td>
+                        <td>table data2</td>
+                        <td>table data3</td>
+                        <td>table data4</td>
+                        <td>table data5</td>
+                    </tr>
+                    <tr>
+                        <td>table data1</td>
+                        <td>table data2</td>
+                        <td>table data3</td>
+                        <td>table data4</td>
+                        <td>table data5</td>
+                    </tr>
+                    <tr>
+                        <td>table data1</td>
+                        <td>table data2</td>
+                        <td>table data3</td>
+                        <td>table data4</td>
+                        <td>table data5</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </body>
+    </head>
+</html>
+
+
+
+Combinators:
+The CSS Combinators are considered to be advanced selectors where we can 
+apply css at different levels. 
+A combinator is something that explains the relationship between the selectors.
+There are four different combinators in CSS:
+
+descendant selector (space):
+The descendant selector selects all the specified elements to any level in the tree from the specified 
+element. 
+<html>
+    <head>
+       <style>
+       /* div p{
+            background-color:red;
+            color: black;
+        }*/
+
+        #element  p{
+            background-color:green;
+            color: black;
+        }
+       </style>
+        <body>
+        <div id="element">
+                  
+            <p>This is Descendant selector(space)</p>
+            <p>This is paragraph 1</p>
+            <h1>This is main header</h1>
+            <section>
+                <p>This is paragraph 1</p>
+            </section>
+            <p>This is paragraph 1</p>
+            <h2>This is main header</h2>
+
+        </div>
+
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <article>
+                <p>one of the paragraph not in div</p>
+                <p>one of the paragraph not in div</p>
+            </article>
+
+        </body>
+    </head>
+</html>
+
+
+
+child selector (>):
+<html>
+    <head>
+       <style>
+        /* div > p{
+            background-color:red;
+            color: black;
+        }*/
+
+        #element > p{
+            background-color:green;
+            color: black;
+        }
+       </style>
+        <body>
+        <div id="element">
+                  
+            <p> This is Child selector(>) </p>
+            <p>This is paragraph 1</p>
+            <h1>This is main header</h1>
+            <section>
+                <p>This is paragraph 1</p>
+            </section>
+            <article>
+                <p>one of the paragraph in article</p>
+            </article>
+            <p>This is paragraph 1</p>
+            <h2>This is main header</h2>
+
+        </div>
+
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <article>
+                <p>one of the paragraph not in div</p>
+                <p>one of the paragraph not in div</p>
+            </article>
+        </body>
+    </head>
+</html>
+
+
+
+adjacent sibling selector (+):
+<html>
+    <head>
+       <style>
+         div + p{
+            background-color:red;
+            color: black;
+        }
+
+        /*#element + p{
+            background-color:green;
+            color: black;
+        }*/
+       </style>
+        <body>
+        <div id="element">
+                  
+            <p>This is Adjacent sibling selector(+)</p>
+            <p>This is paragraph 1</p>
+            <p>This is paragraph 1</p>
+            <h1>This is main header</h1>
+            <section>
+                <p>This is paragraph 1</p>
+            </section>
+            <article>
+                <p>one of the paragraph in article</p>
+            </article>
+            <p>This is paragraph 1</p>
+            <h2>This is main header</h2>
+
+        </div>
+
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <article>
+                <p>one of the paragraph not in div</p>
+                <p>one of the paragraph not in div</p>
+            </article>
+
+        <div>
+            <p>A small paragraph1</p>
+        </div>
+
+            <p>A small paragraph2</p>
+            <p>A small paragraph3</p>
+        </body>
+    </head>
+</html>
+
+
+
+general sibling selector (~):
+The general sibling selector selects all elements that are next siblings of a specified element.
+<html>
+    <head>
+       <style>
+         div ~ p{
+            background-color:red;
+            color: black;
+        }
+
+        /*#element ~ p{
+            background-color:green;
+            color: black;
+        }*/
+       </style>
+        <body>
+        <div id="element">
+                  
+            <p>This is general selector(~)</p>
+            <p>This is paragraph 1</p>
+            <p>This is paragraph 1</p>
+            <h1>This is main header</h1>
+            <section>
+                <p>This is paragraph 1</p>
+            </section>
+            <article>
+                <p>one of the paragraph in article</p>
+            </article>
+            <p>This is paragraph 1</p>
+            <h2>This is main header</h2>
+
+        </div>
+
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <p>one of the paragraph not in div</p>
+            <article>
+                <p>one of the paragraph not in div</p>
+                <p>one of the paragraph not in div</p>
+            </article>
+
+        <div>
+            <p>A small paragraph1</p>
+        </div>
+
+            <p>A small paragraph2</p>
+            <p>A small paragraph3</p>
+        </body>
+    </head>
+</html>
