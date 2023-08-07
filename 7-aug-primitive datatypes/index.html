@@ -1,0 +1,43 @@
+<!-- <html>
+    <head>
+        <body>
+            OTP: <input type="number" size="50" id="otp" placeholder="otp here">
+            <button onclick="otpverified()">here</button>
+            <script>
+                function otpverified(){
+                     var otp=document.getElementById("otp").value
+                     if (otp==1234){
+                        alert("otp valid")
+                     }
+                     else{
+                        alert("otp invalid")
+                     }
+                }
+
+            </script>
+        </body>
+    </head>
+</html> -->
+
+
+
+<html>
+    <head>
+        <body>
+            OTP: <input type="number" size="50" id="otp" placeholder="otp here">
+            <button onclick="otpverified()">here</button>
+            <script>
+                function otpverified(){
+                     var otp=parseInt(document.getElementById("otp").value);
+                     if (otp===1234){
+                        alert("otp valid")
+                     }
+                     else{
+                        alert("otp invalid")
+                     }
+                }
+
+            </script>
+        </body>
+    </head>
+</html>

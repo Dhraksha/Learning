@@ -1,0 +1,135 @@
+Data types: 
+
+JS provides 2 types of Datatypes.
+
+1. Primitive Types : number, boolean , string
+2. Referenced / Non Primitive Types : arrays and objects 
+
+uncategorized types: undefined and null 
+
+Number:
+<html>
+    <head>
+        <body>
+             <script>
+                var a=100;
+                function f1(){
+                    console.log(a);
+                    console.log(typeof a);
+                }f1()
+             </script>
+        </body>
+    </head>
+</html>
+
+
+Boolean:True/False
+<html>
+    <head>
+        <body>
+             <script>
+                var x=true;
+                console.log(x);
+                console.log( typeof x);
+                x=false;
+                console.log( typeof x);
+                x=1;
+                console.log(typeof x);
+
+             </script>
+        </body>
+    </head>
+</html>
+
+
+String:
+A string is a collection of characters
+var str = " "
+
+<html>
+    <head>
+        <body>
+             <script>
+                var x="hello";
+                console.log( typeof x);
+                var y="everone";
+                console.log(typeof y);
+
+             </script>
+        </body>
+    </head>
+</html>
+
+
+<html>
+    <head>
+        <body>
+             <script>
+                var firstname="kenguva";
+                var lastname="dhraksha";
+                firstname=firstname.concat(lastname);
+                console.log(firstname);
+                
+                </script>
+        </body>
+    </head>
+</html>
+
+
+Strings are immutable; that means once we create a string it cannot be changed.However, If we want to update the value of a String then we can reassign the value. 
+
+
+Example:
+
+<html>
+<head>
+</head>
+<body>
+    Email: <input size="50" type="text" id="email" placeholder="enter email">
+    <button onclick="next()">Next</button>
+    <script>
+        function next() {
+            var email = document.getElementById("email").value;
+            console.log(email);
+            email = email.toLowerCase();
+            email = email.trim();
+            console.log("email", email);
+            if (email.includes('@gmail.com')) {
+            }
+            else {
+                if (email.includes('@') && email.includes('.')) {
+
+                }
+                else {
+                    email = email.concat("@gmail.com")
+                }
+            }
+            console.log(email);
+            document.getElementById("email").value = email;
+        }
+    </script>
+</body>
+</html>
+
+
+<html>
+<head>
+</head>
+<body>
+    Email: <input size="50" type="text" id="email" placeholder="enter email">
+    <button onclick="next()">Next</button>
+    <script>
+        function next() {
+            var email = document.getElementById("email").value;
+            email = email.toLowerCase();
+            email = email.trim();
+            if (email.includes('@gmail.com') && email.includes('@') && email.includes('.')) {
+            }
+            else {
+                    email = email.concat("@gmail.com")
+            }
+            document.getElementById("email").value = email;
+        }
+    </script>
+</body>
+</html>
