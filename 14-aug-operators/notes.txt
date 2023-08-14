@@ -1,0 +1,154 @@
+Operators:
+An operator is a special symbol or keyword that provides some functionality .
+ex: + -> addition , concatenation. 
+   
+    typeof -> provides the datatype of a variable.
+
+*Arithmetic Operators: 
+
++,-, *, /(quotient), %(remainder), ++ (increment), --(decrement)
+
+<html>
+    <head>
+        <body>
+            <script>
+                var a=90
+                a++ //postincrement
+                console.log(a); //91
+                ++a; //preincrement
+                console.log(a); //92
+                --a; //predecrement
+                console.log(a); //91
+                a--; //postdecrement
+                console.log(a); //90
+
+                
+            </script>
+        </body>
+    </head>
+</html>
+
+
+<html>
+    <head>
+        <body>
+            <script>
+                 var a=10;
+                 console.log(a++);//10
+                 console.log(++a);//12
+                 console.log(a++);//12
+                 console.log(++a);//14
+                 console.log(a);  //14
+            </script>
+        </body>
+    </head>
+</html>
+
+
+
+
+
+<html>
+    <head>
+        <body>
+            <script>
+                var a=10 , b=20 , c="30" , d="40s"
+                console.log(a+b); //30
+                console.log(a+c); //1030
+                console.log(a+d); //1040s    (For + if there are any strings it will concate)
+                console.log(a-d); //NaN
+                console.log(a-c); //-20 
+                console.log(a+c+d) //103040s
+                console.log(a-c-d); //NaN     (for - if there are any strings including alphabets it gives as NaN(Not a number))
+                
+            </script>
+        </body>
+    </head>
+</html>
+
+*Comparsion Operators: These operators always return boolean values.
+
+<,>,<=,>=,==,===,?:
+
+<html>
+    <head>
+        <body>
+            <script>
+                var a=10 , b=20 , c="30" , d="40s" ,e=30 ,f="30s"
+                console.log(a>b) //false
+                console.log(a<b)//true
+                console.log(a<c)//true     //(If there is any strings with numbers then it converts into numbers ex:"40" this converts to a number 40 but if there is "40s" then it cannot be converted into number)
+                console.log(a>c)//false
+                console.log(b>d)//false
+                console.log(b<d)//false
+                console.log(c<=e)//true
+                console.log(d>e)//false
+
+                console.log(c==e)//true   (checks for content)
+                console.log(c===e)//false   (checks for content & datatype) 
+                console.log(c==f)//false
+                console.log(c===f)//false
+                
+
+                a<b ? console.log("a is less than b") : console.log("a is greater than b")   //a is less than b
+                a>b ? console.log("a is less than b") : console.log("a is greater than b")   // a is greater than b
+                //here the terminatory operator ?: represents like if else statement
+            </script>
+        </body>
+    </head>
+</html>
+
+
+*Logical Operators:
+
+&& (AND), ||(OR), !(NOT)
+
+<html>
+    <head>
+        <body>
+            <script>
+                var a=10 , b=20 , c="30" , d="40s" ,e=30 ,f="30s"
+                console.log(a<b && a>c)//false  {&& operator - both conditions should be true then only result will be true}
+                console.log(a<b && a<c)//true
+                console.log(a<d || b<d)//false  {|| operator - if one condition is true the the result can be true}
+                console.log(e>a || e>b)//true
+                console.log(a<b || a<c)//true
+
+                console.log(!(a>b)) //true      {! - It gives opposite of the result}
+            </script>
+        </body>
+    </head>
+</html>
+
+
+
+<html>
+    <head>
+        <body>
+            <input type="text" id="emailorphonenumber"  size="40"  placeholder="email or phonenumber"><br><br>
+            <input type="text" id="password"  placeholder="password"><br><br>
+            <button onclick="login()">Login</button><br><br>
+            <script>
+                function login(){
+                   var emailorphonenumber = document.getElementById("emailorphonenumber").value;
+                    var password =  document.getElementById("password").value;
+                  (emailorphonenumber=="sai@gmail.com" || emailorphonenumber=="9090909090") && password=="hello" ? alert("login successful" ) : alert("login failure")
+                }
+            </script>
+        </body>
+    </head>
+</html>
+
+
+*typeof operator : This operator used to find the datatype of the variable
+          var a=100 ; b="hello"
+          console.log(typeof a) //number
+          console.log(typeof b) //string
+
+*instanceof operator: It works with objects.
+ It is used to check whether the variable belongs to the object or not .
+ we can create a number by using object also  by using (new) , whenever we are using new that means its an object.
+                var a = new Number(100);
+                var b = new Number(100);
+                console.log(a instanceof Number) //true
+                console.log(b instanceof String) //false

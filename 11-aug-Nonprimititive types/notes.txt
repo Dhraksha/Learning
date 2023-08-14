@@ -1,0 +1,88 @@
+Non Primitive Types: 
+
+Arrays and Objects. 
+
+Arrays:
+
+An Array is a linear data structure which stores the data in the sequential 
+order. 
+
+In JS, An array can store different type of values. 
+
+Syntax: var array_name [1,2,3,"hie"];
+
+javascript provides some predefined functions to work with array.
+
+var info = [1,89,true,false,"Appu",[20,30,40]];
+                console.log(info[3]);
+                console.log(info[5][2]);
+                console.log(info);
+
+Predefined Functions:
+
+                var info = [1,89,true,false, true,"Appu",[20,30,40]];
+                console.log(info);
+                info.pop();     //removes last element
+                console.log(info);
+                info.shift();   //removes first element
+                console.log(info);
+                info.unshift(80); //adds first element
+                console.log(info);
+                var index1=info.indexOf(false);
+                info.splice(index1,1); //splice() add & removes the element
+                console.log(info);
+                var index2=info.lastIndexOf(true);
+                info.splice(index2,1);
+                console.log(info);
+                var index3= info.indexOf(89);
+                info.splice(index3,1);
+                console.log(info);
+                info.unshift(15);
+                info.unshift(11);
+                console.log(info);
+                var index4=info.indexOf(15);
+                info.splice(index4 + 1,0,50);
+                console.log(info);
+
+Objects:
+An object is a realtime entity which contains attributes.
+A javascript object is a representation of realtime entity in the form of key-value pairs.
+
+syntax: 
+
+var object = {
+     key : value,
+     key: value,
+     .
+     .
+     .
+}
+
+Key must be unique and recommeneded to be a String, values can be of any type and need not to be unique.
+
+<html>
+    <head>
+        <body>
+            <script>
+                var object1={
+                    username:"sai",
+                    surname:"kenguva",
+                    dob:{
+                        month:"january",
+                        year:1996,
+                        day:11,
+                    },
+                    Address:{
+                          city:"visakhapatnam",
+                          state:"andhrapradesh",
+                    },
+                    languages:["telugu","hindi","english"],
+                }
+               console.log(object1.username);
+               console.log(object1.Address.state);
+               console.log(object1.languages);
+               console.log(object1.id);
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <body>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        </body>
+        <i id="heart"  onclick="like()" class="fa fa-heart-o" style="color:black;font-size: 100px; "></i>
+        <h1 id="count" style="display: inline;"></h1>
+        <script>
+            var counter=0
+          function like(){
+            counter++
+            document.getElementById("count").innerHTML=counter;
+            var classname= document.getElementById("heart").clssname;
+            if(classname=="fa fa-heart-o" )
+            {
+                document.getElementById("heart").clssname="fa fa-heart";
+                document.getElementById("heart").style.color="red";
+            }
+            else if(classname=="fa fa-heart" )
+            {
+                document.getElementById("heart").clssname="fa fa-heart-o";
+                document.getElementById("heart").style.color="black";
+            }
+          }
+        </script>
+    </head>
+</html>
