@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <body>
+            <input type="text" size="40" id="password" onkeyup="passwordvalidator()"  placeholder="password here"><span id="msg"> </span>
+            <script>
+                function passwordvalidator(){
+              var password= document.getElementById("password").value;
+              if (password.length<8){
+                msg.innerText = "Password must contain 8 characters";
+                return;
+              }
+              else{
+                msg.innerText=""
+              }
+
+              if(/[A-Z]+/g.test(password)){
+                msg.innerText=""
+              }
+              else{
+                msg.innerText="password must have 1 uppercase";
+                return;
+              }
+
+              if(/[a-z]+/g.test(password)){
+                msg.innerText=""
+              }
+              else{
+                msg.innerText="password must have 1 lowercase";
+                return;
+              }
+
+              if(/[\w]+/g.test(password)){
+                msg.innerText=""
+                
+              }
+              else{
+                msg.innerText="password must have 1 specialchar";
+                return;
+              }
+
+              if(/[0-9]+/g.test(password)){
+                msg.innerText=""
+              }
+              else{
+                msg.innerText="password must have 1 digit";
+                return;
+              }
+
+                }
+            </script>
+        </body>
+    </head>
+</html>

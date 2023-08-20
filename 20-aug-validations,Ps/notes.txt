@@ -1,0 +1,156 @@
+Validations:
+
+2 types:
+
+1. basic validations:  js logic 
+2. complex validations: using regular expressions. 
+
+
+Problem Statement: 
+
+Implement a password field with the following validations. 
+
+1. password should be atleast 8 characters 
+2.should have 1 upper case 
+3. should have 1 lower case 
+4. should have 1 special character 
+5. should have 1 digit
+
+Using Js logic:
+
+<html>
+    <head>
+        <body>
+            <input type="text" size="40" id="password" onkeyup="passwordvalidator()"  placeholder="password here"><span id="msg"> </span>
+            <script>
+                function passwordvalidator(){
+              var password= document.getElementById("password").value;
+              var uppercase=["A","B","C","D","E","F","G","H","I" ,"J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+              var lowercase=["a","b","c","d","e","f","g","h","i" ,"j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+              var specialchar=["!","@","#","$","%","*","~"];
+              var digits=["0","1","2","3","4","5","6","7","8","9"]
+              if (password.length<8){
+                msg.innerText = "Password must contain 8 characters";
+                return;
+              }
+              else{
+                msg.innerText=""
+              }
+
+              if(check(password,uppercase)){
+                msg.innerText=""
+              }
+              else{
+                msg.innerText="password must have 1 uppercase";
+                return;
+              }
+
+              if(check(password,lowercase)){
+                msg.innerText=""
+              }
+              else{
+                msg.innerText="password must have 1 lowercase";
+                return;
+              }
+
+              if(check(password,specialchar)){
+                msg.innerText=""
+                
+              }
+              else{
+                msg.innerText="password must have 1 specialchar";
+                return;
+              }
+
+              if(check(password,digits)){
+                msg.innerText=""
+              }
+              else{
+                msg.innerText="password must have 1 digit";
+                return;
+              }
+
+                }
+                function check(password,array){
+                    var isavailable=false;
+                    for (var i=0 ; i<password.length ; i++){
+                    
+                        if(array.includes(password[i])){
+                    isavailable=true;
+                    return isavailable;
+                        }
+                }
+            }
+            </script>
+        </body>
+    </head>
+</html>
+
+
+Regular Expressions: 
+Regular Expressions are used to create search patterns.
+A search pattern is a collection of symbols which is used to represent some pattern for a check.
+syntax: 
+
+ var pattern =   /<pattern>/<modifier>
+
+ 
+
+Solution for above PS:(Using  Regular Expressions)
+
+ <html>
+    <head>
+        <body>
+            <input type="text" size="40" id="password" onkeyup="passwordvalidator()"  placeholder="password here"><span id="msg"> </span>
+            <script>
+                function passwordvalidator(){
+              var password= document.getElementById("password").value;
+              if (password.length<8){
+                msg.innerText = "Password must contain 8 characters";
+                return;
+              }
+              else{
+                msg.innerText=""
+              }
+
+              if(/[A-Z]+/g.test(password)){
+                msg.innerText=""
+              }
+              else{
+                msg.innerText="password must have 1 uppercase";
+                return;
+              }
+
+              if(/[a-z]+/g.test(password)){
+                msg.innerText=""
+              }
+              else{
+                msg.innerText="password must have 1 lowercase";
+                return;
+              }
+
+              if(/[\w]+/g.test(password)){
+                msg.innerText=""
+                
+              }
+              else{
+                msg.innerText="password must have 1 specialchar";
+                return;
+              }
+
+              if(/[0-9]+/g.test(password)){
+                msg.innerText=""
+              }
+              else{
+                msg.innerText="password must have 1 digit";
+                return;
+              }
+
+                }
+            </script>
+        </body>
+    </head>
+</html>
+
+
+Ref: https://www.w3schools.com/jsref/jsref_obj_regexp.asp

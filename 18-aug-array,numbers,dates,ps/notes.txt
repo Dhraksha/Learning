@@ -1,0 +1,237 @@
+Methods of Array :
+                var arr=[1,2,3,"hey","hello"]
+                console.log(arr);
+                arr.push(45);
+                console.log(arr);
+                arr.unshift(33333334);
+                console.log(arr)
+
+
+foreach vs filter vs map :
+            <script>
+                var arr=[0, 1 , 2 ,34 , 0,4 ,5 ,6 ]
+                arr.forEach(function(value) {
+                    console.log(value);
+                })
+
+                var newarray1 =arr.filter(function(value){
+                    return value;
+                })
+                console.log(newarray1);
+
+                var newarray2=[1,2,3,4,5,6,"hello"]
+                var newarray2=arr.map(function(fun){
+                    return fun * 3;
+                })
+                console.log(newarray2);
+            </script>
+
+Problem statement:
+
+ var arr= [10,20,30,10,20,30,40,50,"hello","hey", "hi"]; 
+
+ filter only strings from the above array. 
+
+ hint: filter. 
+
+        <script>
+                 var arr= [10,20,30,10,20,30,40,50,"hello","hey", "hi"]; 
+                 var filterdata=arr.filter(function(value){
+                  return typeof value== "string";
+                 })
+                 console.log(filterdata)
+        </script>
+
+
+Problem Statement: 
+
+Create a simple user management system using arrays.
+
+<html>
+    <head>
+        <body>
+            <h1>Add user form</h1>
+            <input type="text" id="username" placeholder="username here"><br><br>
+            <input type="number" id="number" placeholder="number here"><br><br>
+            <input type="email" id="email" placeholder="email here"><br><br>
+            <button onclick="adduser()"> adduser</button>
+            <ul id="userslist" style="list-style-type: none;">
+
+            </ul>
+            <script>
+                var users=[];
+                function adduser(){
+                    var username=document.getElementById("username").value;
+                    var number=document.getElementById("number").value;
+                    var email=document.getElementById("email").value;
+                    var user={
+                        username: username,
+                        number:number,
+                        email: email,
+                    }
+                    console.log(user);
+                    users.push(user);
+                    console.log(users);
+                    showusers();
+
+                function showusers(){
+                   var userslist=document.getElementById("userslist");
+                   var listitems="";
+                   users.forEach(function(user){
+                   listitems = listitems + "<li>"+user.username+"&nbsp&nbsp&nbsp" + user.number+"&nbsp&nbsp&nbsp" + user.email+"<li>"
+                   })
+                   userslist.innerHTML=listitems;
+                }
+                }                 
+            </script>
+        </body>
+    </head>
+</html>
+
+
+Numbers and Dates:
+
+Numbers: 
+
+        
+We can create numbers in 2 ways
+
+1. using primitive type 
+2. using object 
+
+            
+             <script>
+               var a=89;
+               console.log(typeof a); //number
+               var b=new String("hello")
+               console.log(typeof b); //object (Because new refers to object)
+               var c=89;
+               console.log(a==c);
+               console.log(a===c)                 
+            </script>
+
+
+Dates:
+
+            <script>
+               var date = new Date()
+               console.log(date);
+               console.log(date.getDate());
+               console.log(date.getHours());
+               console.log(date.getMonth());
+               console.log(date.getSeconds());
+               console.log(date.getFullYear());
+               console.log(date.getMinutes());
+            </script>
+
+
+PS: Show the digital time using Date.
+
+<html>
+    <head>
+        <body>
+            <h1 id="dateref"></h1>
+            <script>
+               setInterval(
+                function (){
+                    var date = new Date()
+                 document.getElementById("dateref").innerHTML=date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+                }
+               ),1000
+            </script>
+        </body>
+    </head>
+</html>
+
+
+PS: Display the time stamp in the following format 
+
+
+ DD/MM/YYYY  HH:MM:SS 
+
+ 18/08/2023 12:37:09
+
+
+<html>
+    <head>
+        <body>           
+            <script>
+               function timestamp(){
+                var date=new Date();
+                var d=addzero(date.getDate()) + "/" + addzero((date.getMonth()) + 1) + "/" + date.getFullYear();
+                var t=addzero(date.getHours()) + "/" + addzero(date.getMinutes()) + "/" + addzero(date.getSeconds());
+                return d+ "      " +t
+               }
+               function addzero(singledigit){
+                if (singledigit<10){
+                singledigit = "0" + singledigit;
+               }
+               return singledigit;
+            }
+               console.log(timestamp())
+            </script>
+        </body>
+    </head>
+</html>
+
+
+Problem Statement: 
+
+Based on User's date selection, capture the value and display it on console.
+
+<html>
+    <head>
+        <body>
+            <input type="date" id="datecapture">
+            <button onclick="proceed()">submit</button>           
+            <script>
+                function proceed(){
+                  var datecapture= document.getElementById("datecapture").value;
+                  console.log(datecapture)
+                }               
+            </script>
+        </body>
+    </head>
+</html>
+
+
+Problem Statement:  Task
+Create a text field, ask the user to enter the data in a format (date, time) , capture the 
+date and time , then find the difference between the captured date and current date. 
+
+Strings:
+
+Methods: 
+
+There are 2 types of methods in Strings,
+
+1. results in html elements 
+2. results in  non-html elements 
+
+<html>
+    <head>
+        <body>
+            <div id="abcd">
+
+            </div>                     
+            <script>
+            var a = "hello everyone"
+            console.log(a.toLowerCase());
+            console.log(a.bold())
+            console.log(a.italics())
+            console.log(a.toUpperCase())
+             
+            var socialmedia = "instagram";
+            var url = "https://www.instagram.com";
+            console.log(socialmedia.link(url));
+            document.getElementById("abcd").innerHTML=socialmedia.link(url);
+
+            console.log(a.split(" ")) //['hello', 'everyone']
+            console.log(a.split("")) //['h', 'e', 'l', 'l', 'o', ' ', 'e', 'v', 'e', 'r', 'y', 'o', 'n', 'e']
+            console.log(a.startsWith("hello")) //true
+            console.log(a.endsWith("hello"))  //false
+            console.log(a.endsWith("everyone")) //true
+            </script>
+        </body>
+    </head>
+</html>
