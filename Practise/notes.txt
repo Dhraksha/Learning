@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>New page</title>
+        <style>
+            body{
+                margin: 10px
+            }
+            #horzblock{
+                background-color: rgb(51,53,69);
+                width: 100%;
+                height: 85px;
+                
+
+            }
+            #vertblock{
+                background-color: rgb(51,53,69);
+                height: 100%;
+                width: 120px;
+                margin-top: 1px;
+
+            }
+            #bookfilters{
+                background-color: beige;
+                height: 70px;
+                width:100%;
+                padding-left: 140px;
+                padding-top: 100px;
+                padding-right: ;
+
+            }
+            .whole{
+                display: flex;
+                
+            }
+        </style>
+        <body>
+            <div id="horzblock">
+                <img style="margin-left: 10px; border-radius: 50%;" src="noteimg.png" height="100%" width="100px">
+               
+                
+            </div>
+            <div class="whole">
+            <div id="vertblock">
+                <img src="dashboard.png" height="25px" width="30px" style="padding-top:80px; padding-left:5px; "><em style="color: white;">Dashboard</em>
+                <img src="surf e books.png" height="25px" width="30px" style="padding-top: 20px;padding-left:5px;"><em style="color: white;">Surf e-books</em>
+                <img src="take quiz.png" height="25px" width="30px" style="padding-top: 20px;padding-left:5px;"><em style="color: white;">Take quiz</em>
+            </div>
+
+            <div id="bookfilters" >
+                
+                
+
+            </div>
+        </div>
+        </body>
+    </head>
+</html>

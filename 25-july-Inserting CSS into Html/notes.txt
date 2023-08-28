@@ -1,0 +1,257 @@
+Inserting CSS into HTML(Inline, Internal,External)
+
+We can categorize css styles into 3 types. 
+
+1. Inline : Inline CSS can be applied at the element level using style attribute.
+
+ <h1 style="text-align: center">This is a header</h1>
+
+2. Internal  :
+
+
+<html>
+
+<head>
+
+    <!-- internal style sheet-->
+
+    <style>
+        h2 {
+            font-family: cursive;
+            text-align: center
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Inline Style Sheet-->
+    <h1 style="text-align: center">This is a header</h1>
+
+    <h2>Header 2</h2>
+    <h2>Header 2.1</h2>
+    <h2>Header 2.2</h2>
+    <h2>Header 2.3</h2>
+
+</body>
+
+</html>
+
+
+3. External :  used to provide css for multiple pages.
+
+Take an example using below 3pages
+style.css:
+
+h1 {
+            text-align: center;
+            color: whitesmoke;
+            background-color: grey;
+            font-family: cursive
+}
+
+page1.html:
+
+<html>
+
+<head>
+    <style>
+        h1 {
+            text-align: right;
+            font-family: cursive
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Digital Lync Technologies</h1>
+    <h2>Page One</h2>
+</body>
+
+</html>
+
+
+page2.html:
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Digital Lync Technologies</h1>
+    <h2>Page Two</h2>
+</body>
+
+</html>
+
+
+page3.html:
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Digital Lync Technologies</h1>
+    <h2>Page Three</h2>
+</body>
+
+</html>
+
+COLOR:
+<html>
+    <head>
+        <style>
+            h1{
+                /* color: teal; */
+                /* color: rgb(50, 190, 172) */
+                   color: #00b3b3
+            }
+        </style>
+        <body>
+            <h1>E-commerce Application</h1>
+        </body>
+    </head>
+</html>
+
+
+
+<html>
+    <head>
+        <style>
+           
+           body{
+            /*background-image: url("images.png");
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-attachment: fixed;*/
+        
+            background:url("images.png") no-repeat fixed top right;
+                       }
+            
+                
+        </style>
+        <body>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+             <h1>amazon advertising</h1>
+             <h1>jdscljsldjc</h1>
+             <h1>fvhlshvlshvlsv</h1>
+
+        </body>
+    </head>
+</html>
+
+
+
+
+
+
+PSTMT:Create a background image that fills the complete page & on top of it, create a registeration form with 3 form fields.
+1:
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url("backgrnd\ image.jpg");
+                background-size:cover;
+            }
+        </style>
+        <body>
+            <center>
+                <h1 style=" color: black; background-color: antiquewhite;">REGISTRATION FORM</h1>
+             <form>
+                <label>Name:</label><input type="text"><br><br>
+                <label>password:</label><input type="password"><br><br>
+                <label>Contact no:</label><input type="number"><br><br>
+                <label>DOB:</label><input type="date"><br><br>
+                <label>email:</label><input type="email"><br><br>
+                <button>submit</button>
+
+            </center>
+             </form>
+        </body>
+    </head>
+</html>
+
+
+
+
+
+2:
+<html>
+    <head>
+        <style>
+            
+            body{
+                background-image: url("image1.jpg");
+                background-size:cover;
+            }
+        </style>
+        <body>
+            <a style="color: rgb(122, 77, 14); font-size:70px; " href="Rform.html">Registeration</a>
+            
+        </body>
+    </head>
+</html>
+
+Rform page code
+<html>
+    <head>
+        <style>
+            
+            body{
+                background-image:url("image1.jpg");
+                background-size:cover;
+            }
+        </style>
+        <body>
+            <center>
+                <h1 style=" color: black; background-color: antiquewhite;">REGISTRATION FORM</h1>
+             <form>
+                <label>Name:</label><input type="text"><br><br>
+                <label>password:</label><input type="password"><br><br>
+                <label>Contact no:</label><input type="number"><br><br>
+                <label>DOB:</label><input type="date"><br><br>
+                <label>email:</label><input type="email"><br><br>
+                <button>submit</button>
+            
+            </center>
+             </form>
+
+        </body>
+    </head>
+</html>
+
