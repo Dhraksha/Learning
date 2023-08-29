@@ -1,0 +1,24 @@
+Drag & Drop
+
+Drag Event :
+       Drag over
+       Drag leave
+       Drag end
+
+Drop event:
+        ondragleave: It occurs when the mouse leaves an element before a valid drop target while the drag is occurring.
+        ondragover: It specifies where the dragged data can be dropped.
+        ondrop: It specifies where the drop has occurred at the end of the drag operation.
+        ondragend: It occurs when the user has finished dragging an element.
+
+
+element.addEventlistener(eventtime , callback);
+> When the event is triggered automatically what ever the source code written in callback function will be executed.
+queryselector()-For id this is sufficient.
+queryselectorAll()-For class and tag this need to be used.
+
+
+FileReader()-This converts the image to base64 format(text format)
+const reader = new FileReader()
+reader.readAsDataUrl();
+reader.result
