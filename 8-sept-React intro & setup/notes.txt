@@ -1,0 +1,48 @@
+React JS - UI Library for building web application.
+
+React Native - Mobile Applications
+
+Flutter - Dot Programming language
+
+> It uses SPA - Single Page Application - Routing
+
+Components
+> React is a free and open-source front-end JavaScript library for building user interfaces based on components. 
+> It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js. 
+> Introduced by Meta in 2013.
+> Uses Javascript programming language
+> Author Jordan Walke
+
+Node Js - Javascript Runtime environment
+For downloading nodejs:
+https://nodejs.org/en
+18.17.1 LTS
+
+npm - node package manager - It manages all the package present in nodejs
+npm install package-name - Adds package to the current folder.
+npm uninstall package-name - Removing
+npm install -global package-name 
+JSX - Javascript Extension - It provides feature of writing html and javascript in a mixture in javascript file.
+
+For installing create-react-app
+npm install -g create-react-app
+
+
+> Create React App is an officially supported way to create single-page React applications. It offers a modern build setup with no configuration.
+For creating the project using create-react-app
+npx create-react-app project-name
+cd project-name - Navigate inside the project folder
+npm start - Execute the source code and start the react server.
+
+
+ecommerce-app
+    node_modules - Consists of all the packages which used for the app.
+        react
+        react-dom
+        react-scripts
+    public - Consists of index.html and all the asset files like images, videos, audio, etc...
+    src - source - Consists of all the files of project which we are developing.
+    .gitignore - It consists of all the file names which you want to stop inserting into cloud.
+    package-lock.json - Consists of all the package names and versions used by our packages.
+    package.json - Consists of all the package names and versions used by us directly along with scripts.
+    README.md - Text file were we can write about the config steps of the project.
