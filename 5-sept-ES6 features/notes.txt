@@ -1,0 +1,57 @@
+Arrow Functions: Arrow functions are anonymous functions i.e. functions without a name and are not bound by an identifier. 
+  -> Arrow functions do not return any value and can be declared without the function keyword. They are also called Lambda Functions.
+
+  Syntax:
+        const funcName = function(arg1, arg2) {
+            return value;
+        };
+        arrayName.forEach(function(value) {
+           
+            return value;
+        });
+        arrayName.forEach((value) => value);
+
+-> It will be applicable for anonymous and callback functions.
+
+4. Enhanced object literals
+    > We can specify key for one time if key and variable name is similar
+    > Creating dynamic keys
+    > Defining functions
+
+
+5. Template strings
+    Syntax:
+        `string${variableName}string string,${variableName}`;
+
+
+6. Default function arguments
+> It helps us in assigning default value to the function arguments.
+    Syntax:
+        function funcName(arg1 = defaultValue, arg2 = defaultValue) {
+        }
+
+
+7. Rest and spread operators
+    Rest Operator: It is used to store rest of the parameters passed to function in an array.
+    Syntax :
+        function funcName(arg1 , ...restvariablename){
+
+        }
+        funcName (value1 ,value2);
+        funcName(value1 , value2 , value3);
+
+
+    Spread Operator: It is used to extract value of array/object.
+        Syntax:
+            ...arrayName
+            ...ObjectName
+
+
+
+8. Destructuring of Array and Object
+    const variable1 = arr[0];
+    const variable2 = arr[1];
+    const [variable1, variable2] = [value1, value2];
+    const {variable1, variable2} = {key1: value1, key2: value2};
+    9032345245
+    +91 903 234 5245

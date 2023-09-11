@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="message"></p>
+    <script>
+        const users = [
+            {
+                firstName: 'Manideep',
+                email : "manideep@gmail.com"
+            },
+            {
+                firstName: 'Charan',
+                email : "charan@gmail.com"
+            },
+        ];
+
+        var emailInput = "Manideep@gmail.com";
+
+        const validateemailpromise =  new Promise (function(resolve , reject){
+            //validates if email is registered with the app or not
+            setTimeout(() => {
+                const isEmailRegistered = users.find(user => user.email === emailInput);
+                if (isEmailRegistered){
+                    resolve(true);
+                }
+                else{
+                    reject("email is not registered with this app");
+                }
+            },3000)
+        });
+
+        const sendEmailpromise = new Promise(function(resolve , reject){
+            setTimeout(() => {
+               let issendemail = true;
+               if(issendemail){
+                resolve(`We sent a reset password email to ${emailInput} Please click the reset password link to set your new password.`);
+               }
+               else{
+                reject(`unable to send email to the user`);
+               }
+            },1000)
+        })
+
+        validateemailpromise.then(function(response){
+           sendEmailpromise.then(function(response){
+            document.getElementById("message").innerHTML = response;
+           }).catch(function(error){
+            
+           })
+        }).catch(function(error){
+            document.getElementById("message").innerHTML = error;
+        });
+
+
+        
+
+
+    </script>
+</body>
+</html> -->
+
+
+ 

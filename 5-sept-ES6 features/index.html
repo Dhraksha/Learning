@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//          const students = [
+//             {
+//                 name: 'Karthik',
+//                 branch: 'CSE'
+//             },
+//             {
+//                 name: 'Satish',
+//                 branch: 'ECE'
+//             },
+//             {
+//                 name: 'Varun',
+//                 branch: 'EEE'
+//             },
+//         ]
+            
+// //         const eligibleBranches = ['CSE', 'ECE'];
+// //         const isEligible = eligibleBranches.some(function(branch) {
+// //                 return branch === students[2].branch;
+// //         })
+// //         const isEligibles = eligibleBranches.some((branch) => branch===students[2].branch);
+// // ​        console.log(isEligible);
+
+
+       var employee_name = "Dhrakshayani"
+       var employee_id = "19L31A03A6"
+       var employee_designation = "AASE"
+       const emp = {
+        employee_name,
+        employee_id,
+        designation : "AASE",
+        ["employee" + "_" + "salary"] : 6413443133,
+        ["employee" + "_" + employee_id] : 4100000000000000,
+        getemployee_id: () => this.employee_id ,
+        // getemployee_id() {
+        //     return this.employee_id
+        // }
+       };
+       console.log(emp)
+       console.log(emp.getemployee_id());
+
+
+
+
+
+       const arr=[12,34,34,13,56,76,90,68,1]
+       function sortNums(arr = [] , order = "asc"){
+        if(order=== "asc"){
+            return arr.sort();
+        }else {
+            return arr.sort().reverse()
+        }
+       }
+       let resultant =  sortNums(arr , "asc");
+       console.log(resultant)
+
+
+
+
+
+       function SumofNums(value1 , value2){
+            return value1 + value2
+       }
+       resultant = SumofNums (23 , 98)
+       console.log(resultant);
+        
+       function SumofNums(value1 , value2 , ...valuesn){
+            console.log(valuesn);
+            return value1 + value2
+       }
+       resultant = SumofNums (23 , 98 , 31 ,1 , 64)
+       console.log(resultant);
+
+       function SumofNums(...valuesn){
+            console.log(valuesn);
+            let sum=0;
+            valuesn.forEach(value => {
+                sum += value;
+            })
+            return sum;
+       }
+       resultant = SumofNums (23 , 98 , 31 ,1 , 64)
+       console.log(resultant);
+
+
+
+
+
+       const arr2 = [...arr , 354 ,31 ,34]
+       console.log(arr2)
+
+       const objname = {
+        name : "ljd",
+        id : 98,
+       };
+       const objname2 = { ...objname , mobileno : 9626653336};
+       console.log(objname2);
+
+
+
+
+
+
+       const [student1 , student2]=students;
+       console.log(student1);
+       console.log(student2);
+
+
+       
+
+
+
+       const mobileno = 9010070270;
+       const mobilenoarr = mobileno.toString().split('');
+       console.log(mobilenoarr);
+       const [n1 ,n2,n3,n4,n5,n6,n7,n8,n9,n10] = mobilenoarr;
+       const formattednum = `+91 ${n1}${n2}${n3}  ${n4}${n5}${n6}  ${n7}${n8}${n9}${n10}`;
+       console.log(formattednum)
+
+
+       const {name , branch} = students[1];
+       console.log(name , branch)
+
+
+
+    </script>
+    
+</body>
+</html>

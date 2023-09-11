@@ -1,0 +1,10 @@
+CACHE MANIFEST:
+/theme.css
+/image.png
+/index.html
+
+NETWORK:
+login.js 
+
+FALLBACK:
+/offline.html

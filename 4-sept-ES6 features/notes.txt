@@ -1,0 +1,79 @@
+ES 6 - ECMA Script 2015
+1. let and const
+2. Array helper Functions
+    forEach
+    map
+    reduce
+    filter
+    find
+    every
+    some
+3. Arrow Functions
+4. Enhanced object literals
+5. Template strings
+6. Default function arguments
+7. Rest and spread operators
+8. Destructuring of Array and Object
+9. Promises
+
+
+Scope - Visibility of a value of variable
+1. Global Scope
+2. Local Scope
+3. Block Scope
+
+let - It works in a block scope, we can assign the value for the variable for multiple times.
+const - It works in a block scope, whereas we can assign the value only for once.
+
+Syntax:
+        let variableName = value;
+        const variableName = value;
+
+
+forEach: For iterating through out the array we can use forEach
+Syntax: 
+    Arrayname forEach(function(value, Index , Arrayname){
+
+    })
+ 
+       value - mandatory
+       index & arrayName - optional
+
+
+map: It is used to modify the data which is present in the array.
+Syntax:
+        const resultant = arrayName.map(function(value, index, arrayName) {
+            return modifiedValue;
+        })
+
+
+filter: It is used to filter records from the array based on condition.
+Syntax:
+       const resultant = Arrayname.filter(function(value , index , Arrayname){
+        return condition ;
+       })
+
+   - It returns value in the resultant array only if the condition is satisfied.
+
+
+find: Used to find the value from the array based on matched condition.
+Syntax:
+       const resultant = Arrayname.find(function(value , index , Arrayname){
+        return condition ;
+       })
+
+
+every: If every value present in array is satisfying with the condition it returns true otherwise false.
+       -Similar to Logical AND
+Syntax:
+      const resultant = Arrayname.every(function(value , index ,Arrayname){
+        return condition;
+      });
+
+
+some: If any of the value is satisfied with the condition it returns true otherwise it returns false.
+     -Similar to Logical OR
+Syntax:
+        const isAnyValue = arrayName.some(function(value) {
+            return condition;
+        });

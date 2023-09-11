@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let isReactApp = true;
+        const organizationName = "digital lync";
+        for (let i=0 ; i<6 ; i++){
+            console.log(i , "inside the loop");
+        }
+
+       
+        //console.log(i , "outside the loop")
+    
+
+        var students = [
+            {
+               name : "shyam",
+               id : 101,
+               branchb : "EEE",
+               joineddate :  "2023-02-04T07:05:56.988Z"
+            },
+            {
+               name : "sruthi",
+               id : 102,
+               branchb : "vertinary",
+               joineddate :  "2023-03-04T07:05:56.988Z"
+            },
+            {
+               name : "bhavitha",
+               id : 103,
+               branchb : "CSE",
+               joineddate :  "2023-04-04T07:05:56.988Z"
+            },
+            {
+               name : "pudi",
+               id : 104,
+               branchb : "Mechanical",
+               joineddate :  "2023-05-04T07:05:56.988Z"
+            },
+            {
+               name : "sravani",
+               id : 105,
+               branchb : "Mechanical",
+               joineddate :  "2023-06-04T07:05:56.988Z"
+            },
+            {
+               name : "Ijjuu",
+               id : 106,
+               branchb : "Mechanical",
+               joineddate :  "2023-07-04T07:05:56.988Z"
+            }
+        ];
+
+        students.forEach(function(stdt , index){
+            console.log(stdt.name , stdt.id , stdt.branchb, index);
+        });
+
+        const formattedStudents = students.map(function(stdt){
+            const dateObj = new Date(stdt.joineddate);
+            const _formattedDate = dateObj.getDate() + "/" + (dateObj.getMonth()+1) + "/" + dateObj.getFullYear();
+            const formattedDate =` ${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()}`; //Template literals
+            return {...stdt , joineddate : formattedDate};
+        });
+        console.log(formattedStudents)
+
+
+        const filteredStudents = students.filter(function(stdt){
+            return stdt.branchb === "Mechanical"
+        });
+        console.log(filteredStudents)
+
+
+        const findingObj = students.find(function(stdt){
+            return stdt.id === 105;
+        });
+        console.log(findingObj)
+
+
+        const iseverystdtismechanical = students.every(function(stdt){
+            return stdt.branchb==="mechanical"
+        });
+        console.log(iseverystdtismechanical);
+
+
+       
+        const students1 = [
+            {
+                name:"sai",
+                branch : "Software engineer"
+            },
+            {
+                name:"kumar",
+                branch : "test engineer"
+            },
+            {
+                name:"padmanabha",
+                branch : "Developer"
+            },
+        ]
+        const eligiblebranches =["Software engineer" , " test engineer" ];
+
+            // const filteredStudents = students1.filter(function(std) {
+            //     return eligibleBranches.some(function(branch) {
+            //         return branch === std.branch;
+            //     })
+            // });
+
+
+        const iseligible =  eligiblebranches.some(function(branch){
+            return branch === students1[0].branch;
+        })
+        console.log(iseligible);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+Callback: Passing function defintion as a paramter/argument to another function we call it as callback function.
+    Syntax:
+        function x() {
+        }
+        function y(x) {
+        }
+        function z(y) {
+        }
+        z(y);
+Callback hell
+
+
+Promises:
+A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+
+    Syntax:
+        const promise = new Promise(function(resolve, reject) {
+            // asynchronous operation
+            resolve(value); - Success eventual completion
+            reject(value); - Failure eventual error
+        }); - Creation of promise
+
+        promise.then(function(response) {
+            // success dependant statements
+        }).catch(function(error) {
+            // failure dependant statements
+        }); 
+
+
+If we call resolve, then method will be called automatically.
+If we call reject, catch emthod will be called automatically.
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+​
+    <p id="message"></p>
+    <script>
+​
+        const users = [
+            {
+                firstName: 'Manideep',
+                lastName: 'K',
+                gender: 'Male',
+                email: 'manideep@digital-lync.com'
+            },
+            {
+                firstName: 'Charan',
+                lastName: 'G',
+                gender: 'Male',
+                email: 'charan@digital-lync.com'
+            },
+            {
+                firstName: 'Harika',
+                lastName: 'G',
+                gender: 'Female',
+                email: 'harika@digital-lync.com'
+            }
+        ];
+​
+        var emailInput = 'charan@digital-lync.com';
+​
+        const validateEmailPromise = new Promise(function(resolve, reject) {
+            // Validates if email is registered with the app or not?
+            setTimeout(() => {
+                const isEmailRegistered = users.find(user => user.email === emailInput);
+                if (isEmailRegistered) {
+                    resolve(true);
+                } else {
+                    reject('Your email is not registered with our app, Please signup');
+                }
+            }, 3000);
+        });
+​
+        const sendEmailPromise = new Promise(function(resolve, reject) {
+            // Sends email to the registered email provided by user.
+            setTimeout(() => {
+                let isSendEmail = true;
+                if (isSendEmail) {
+                    resolve(`We sent a reset password email to ${emailInput}. Please click the reset password link to set your new password.`);
+                } else {
+                    reject('Unable to send email to the user');
+                }
+            }, 1000);
+        })
+​
+        validateEmailPromise.then(function(response) {
+            sendEmailPromise.then(function(response) {
+                document.getElementById('message').innerHTML = response;
+            }).catch(function(error) {
+​
+            });
+        }).catch(function(error) {
+            document.getElementById('message').innerHTML = error;
+        });
+​
+        const modifiedUsers = users.map(user => {
+            const str = user.gender === 'Male' ? 'Mr.' : 'Miss.';
+            return {...user, fullName: `${str}${user.lastName} ${user.firstName}`};
+        });
+​
+        console.log(modifiedUsers);
+​
+    </script>
+</body>
+</html>
